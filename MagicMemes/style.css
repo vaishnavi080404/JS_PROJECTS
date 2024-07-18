@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    font-family: "Roboto", sans-serif;
+    overflow: hidden;
+  }
+  
+  .meme-generator {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    color: #fff;
+  }
+  
+  .meme-generator img {
+    max-height: 60%;
+    max-width: 90%;
+    object-fit: contain;
+    display: none;
+    margin: 20px 0;
+    border-radius: 10px;
+  }
+  
+  .meme-generator .generate-meme-btn,
+  .meme-generator .share-btn,
+  .meme-generator .like-btn {
+    padding: 8px 20px;
+    border: none;
+    margin: 10px 5px;
+    font-size: 20px;
+    color: #fff;
+    background: #f58529;
+    cursor: pointer;
+    transition: all 400ms ease;
+    border-radius: 5px;
+  }
+  
+  .meme-generator .generate-meme-btn:hover,
+  .meme-generator .share-btn:hover,
+  .meme-generator .like-btn:hover {
+    background: #dd2a7b;
+  }
+  
+  .meme-generator .meme-author {
+    margin: 8px;
+    color: #515bd4;
+  }
+  
+  .loader {
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid #dd2a7b;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    display: none;
+    margin: 20px auto;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .heart-animation {
+    position: absolute;
+    font-size: 50px;
+    color: #dd2a7b;
+    animation: pop-out 0.6s ease-in-out;
+    display: none;
+    pointer-events: none;
+  }
+  
+  @keyframes pop-out {
+    0% {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.5) translateY(-20px);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1) translateY(-40px);
+      opacity: 0;
+    }
+  }
+  
+  .laughing-emoji-animation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    color: #fff;
+    display: none;
+    animation: laugh-out 1s ease-in-out infinite;
+  }
+  
+  @keyframes laugh-out {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.5);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+  }

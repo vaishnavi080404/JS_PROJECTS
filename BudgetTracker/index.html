@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Income and Expense Tracker</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Income and Expense Tracker</h1>
+
+        
+        <div class="form-container">
+            <h2>Add Income</h2>
+            <form id="income-form">
+                <input type="text" id="income-source" placeholder="Source" required>
+                <input type="number" id="income-amount" placeholder="Amount" required>
+                <button type="submit">Add Income</button>
+            </form>
+        </div>
+
+        
+        <div class="form-container">
+            <h2>Add Expense</h2>
+            <form id="expense-form">
+                <input type="text" id="expense-name" placeholder="Expense Name" required>
+                <input type="number" id="expense-amount" placeholder="Amount" required>
+                <button type="submit">Add Expense</button>
+            </form>
+        </div>
+
+        
+        <div class="lists-container">
+            <div class="list-container">
+                <h2>Income</h2>
+                <ul id="income-items"></ul>
+            </div>
+            <div class="list-container">
+                <h2>Expenses</h2>
+                <ul id="expense-items"></ul>
+            </div>
+        </div>
+
+        <p class="balance" id="balance-display" style="border: 2px solid black; border-radius: 5px; ">Your Balance: $0.00</p>
+
+        
+        <div class="summary">
+            <h2>Summary</h2>
+            <div class="charts-container">
+                <canvas id="income-chart"></canvas>
+                <canvas id="expense-chart"></canvas>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
